@@ -1,0 +1,117 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*10px == 1rem*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Pt Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*utilidades*/
+
+.centrar-texto {
+    text-align: center;
+}
+
+.no-margin {
+    /*para eliminar los margenes*/
+    margin: 0;
+}
+
+/*header*/
+
+@media(min-width:768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.site-header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    /*para que no se repita la misma imagen*/
+    background-position: center center;
+    /*centrar la imagen*/
+    background-size: cover;
+    /*para que la imagen ocupe todo el espacio*/
+    height: 60rem;
+    /*la altura del header*/
+}
+
+.site-header a {
+    color: white;
+    text-decoration: none;
+}
+
+.site-header h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.site-header h1 span {
+    font-weight: 800;
+}
+
+/*navegacion*/
+
+.navegacion a {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+}
+
+@media(min-width:768px) {
+    .navegacion a {
+        display: inline;
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.texto-header {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.texto-header p {
+    font-size: 2.2rem;
+}
