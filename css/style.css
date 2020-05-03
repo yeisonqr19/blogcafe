@@ -56,6 +56,19 @@ img {
     margin: 0;
 }
 
+/*grid*/
+@media(min-width:768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .columna-6{
+        flex-basis: calc(50% - 1.5rem);
+    }
+    
+}
+
 /*Botones*/
 
 .btn {
