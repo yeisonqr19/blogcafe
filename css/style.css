@@ -57,21 +57,33 @@ img {
 }
 
 /*grid*/
-@media(min-width:768px){
-    .grid{
+
+@media(min-width:768px) {
+    .grid {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        /*este flex-wrap es para que el formulario que hay en contacto se coloque abajo y no a la derecha*/
     }
-    .columna-4{
+    .centrar-columnas {
+        justify-content: center;
+        /*esto es para centrar el formulario dentro de la imagen*/
+    }
+    .columna-4 {
         flex: 0 0 calc(33.3% - 1rem);
     }
-    .columna-6{
+    .columna-6 {
         flex-basis: calc(50% - 1.5rem);
     }
-    .columna-8{
+    .columna-8 {
         flex: 0 0 calc(66.6% - 1rem);
     }
-    
+    .columna-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columna-12 {
+        flex: 0 0 100%;
+    }
 }
 
 /*Botones*/
@@ -88,16 +100,22 @@ img {
     padding: 1rem 3rem;
     margin: 3rem 0;
     text-transform: uppercase;
+    flex: 0 0 100%;
+}
+.btn:hover{
+    cursor: pointer;
 }
 
 @media(min-width:780px) {
     .btn {
         display: inline-block;
+        flex: 0 0 auto;
     }
 }
 
 .btn-primario {
     background-color: black;
+    
 }
 
 .btn-secundario {
@@ -242,29 +260,74 @@ img {
     font-weight: 400;
 }
 
-.curso p.descripcion{
+.curso p.descripcion {
     /*esto es para poner mas peso en esta etiqueta y que se apliquen los estilos*/
     font-weight: 400;
 }
 
 /*footer*/
-.site-footer{
+
+.site-footer {
     background-color: black;
     padding: 3rem;
     margin-top: 3rem;
 }
 
-.site-footer p{
-    color:white;
+.site-footer p {
+    color: white;
     font-size: 4rem;
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
     text-align: center;
 }
-.site-footer span{
+
+.site-footer span {
     font-weight: 700;
 }
 
-.barra a{
+.barra a {
     text-decoration: none;
 }
+
+/*contacto*/
+
+.formulario-contacto {
+    background-color: white;
+    padding: 5rem;
+}
+
+@media(min-width:768px) {
+    .formulario-contacto {
+        margin-top: -10rem;
+        /*este margin negativo es para que el formulario se coloque sobre la imagen*/
+    }
+}
+
+.formulario-contacto .campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.formulario-contacto .campo label{
+    flex: 0 0 8rem;
+}
+
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea{
+    flex: 1;
+    border: solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto textarea{
+    height: 20rem;
+}
+
+.formulario-contacto .enviar{
+    display:flex;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+
